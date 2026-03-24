@@ -37,10 +37,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(
                       AppColors.textFieldFill,
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.r),
                         side: BorderSide(color: AppColors.borderColor),
@@ -73,7 +73,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             SmoothPageIndicator(
               controller: _controller,
-              count: 3,
+              count: 2,
               effect: ExpandingDotsEffect(
                 activeDotColor: AppColors.primary,
                 dotColor: AppColors.borderColor,
