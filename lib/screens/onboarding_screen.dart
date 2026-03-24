@@ -36,15 +36,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           builder: (context) => const LoginScreen(),
                         ),
                       ),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      AppColors.background,
+                    ),
+                  ),
                   child: Text(
                     'Skip',
                     style: AppStyles.medium12Primary.copyWith(
                       color: AppColors.primary,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      AppColors.background,
                     ),
                   ),
                 ),
@@ -62,7 +62,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   OnboardingContent(
                     image: 'assets/onBoarding_img.png',
-                    // Changed to existing asset
                     title: 'Stay Connected',
                     description:
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Voluptas consectetur adipisicing.',
