@@ -27,7 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: EdgeInsets.all(20.w),
+                padding: EdgeInsets.all(24.w),
                 child: TextButton(
                   onPressed:
                       () => Navigator.pushReplacement(
@@ -38,15 +38,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      AppColors.background,
+                      AppColors.textFieldFill,
+                    ),
+                    shape: WidgetStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.r),
+                        side: BorderSide(color: AppColors.borderColor),
+                      ),
                     ),
                   ),
-                  child: Text(
-                    'Skip',
-                    style: AppStyles.medium12Primary.copyWith(
-                      color: AppColors.primary,
-                    ),
-                  ),
+                  child: Text('Skip', style: AppStyles.medium12Primary),
                 ),
               ),
             ),
@@ -62,6 +63,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   OnboardingContent(
                     image: 'assets/onBoarding_img.png',
+                    // Changed to existing asset
                     title: 'Stay Connected',
                     description:
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Voluptas consectetur adipisicing.',
@@ -125,15 +127,15 @@ class OnboardingContent extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.r),
             child: Image.asset(
               image,
-              height: 300.h,
-              width: double.infinity,
+              height: 350.h,
+              width: 256.w,
               fit: BoxFit.contain,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
-                  height: 300.h,
-                  width: double.infinity,
+                  height: 350.h,
+                  width: 256.w,
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: AppColors.background,
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                   child: const Icon(
@@ -145,17 +147,21 @@ class OnboardingContent extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 40.h),
+          SizedBox(height: 32.h),
           Text(
             title,
             style: AppStyles.semiBold24Primary,
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 15.h),
-          Text(
-            description,
-            style: AppStyles.regular12Secondary,
-            textAlign: TextAlign.center,
+          SizedBox(
+            height: 28.h,
+            width: 256.w,
+            child: Text(
+              description,
+              style: AppStyles.regular12Secondary,
+              textAlign: TextAlign.center,
+            ),
           ),
         ],
       ),
