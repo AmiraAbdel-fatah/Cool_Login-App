@@ -96,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     "Don't have an Account? ",
                     style: AppStyles.regular14Secondary.copyWith(
-                        color: AppColors.text),
+                        color: Color(0xFF6B7280)),
                   ),
                   GestureDetector(
                     onTap:

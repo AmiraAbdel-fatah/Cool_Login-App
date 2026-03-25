@@ -7,5 +7,4 @@ class AppColors {
   static const Color secondary = Color(0xFF757575);
   static const Color textFieldFill = Color(0xFFEDEEEF);
   static const Color borderColor = Color(0xFFD8D8D8);
-  static const Color text = Color(0xFF6B7280);
 }
