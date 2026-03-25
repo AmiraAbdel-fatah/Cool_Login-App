@@ -57,17 +57,19 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'Forgot Password?',
-                    style: AppStyles.semiBold14Primary,
+                    style: AppStyles.semiBold14Primary.copyWith(
+                        color: AppColors.primary),
                   ),
                 ),
               ),
-              SizedBox(height: 160.h),
+              SizedBox(height: 200.h),
               CustomElevatedButton(text: 'Login', onPressed: () {}),
               SizedBox(height: 20.h),
               Center(
                 child: Text(
                   'Or Continue with',
-                  style: AppStyles.semiBold12Primary,
+                  style: AppStyles.semiBold12Primary.copyWith(
+                      color: Color(0xFF9CA3AF)),
                 ),
               ),
               SizedBox(height: 20.h),
@@ -93,7 +95,8 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Don't have an Account? ",
-                    style: AppStyles.regular14Secondary,
+                    style: AppStyles.regular14Secondary.copyWith(
+                        color: AppColors.text),
                   ),
                   GestureDetector(
                     onTap:
@@ -101,15 +104,13 @@ class LoginScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignUpScreen(),
+                            builder: (context) => const SignupScreen(),
                           ),
                         ),
                     child: Text(
                       'Sign-Up',
                       style: AppStyles.medium14Primary.copyWith(
-                        fontSize: 14.sp,
                         fontWeight: FontWeight.bold,
-                        color: AppColors.primary,
                       ),
                     ),
                   ),

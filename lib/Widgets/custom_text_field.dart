@@ -21,9 +21,10 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsetsDirectional.symmetric(horizontal: 12.w),
       decoration: BoxDecoration(
         color: AppColors.textFieldFill,
-        borderRadius: BorderRadius.circular(15.r),
+        borderRadius: BorderRadius.circular(128.r),
       ),
       child: TextField(
         obscureText: isPassword,
